@@ -1,0 +1,142 @@
+.presentation {
+    width: calc(100% - 100px); /* Ajuste de ancho */
+    max-width: 2000px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    border-radius: 20px; /* Bordes redondeados suaves */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+    background: #500F15; /* Fondo suave degradado */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30); /* Sombra sutil */
+  
+}
+
+.MyName {
+    font-family: "Madimi One"; /* Tipografía elegante */
+    font-size: 7vh; /* Ajuste fluido para pantallas grandes */
+    padding: 20px;
+    color: #FFF; /* Color suave */
+    background-color: transparent;
+    border: transparent;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.MyName span {
+    color: #b93231;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #f5b6c1; /* Subrayado en color pastel */
+}
+
+.typewriter-container {
+   font-family: "Madimi One";
+    font-size: 2.5vw; /* Ajuste fluido */
+    color: #b93231;
+    border-right: 2px solid #d14b5d;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    padding-right: 2px;
+    animation: blink-cursor 0.8s steps(2) infinite;
+    background: rgba(255, 245, 245, 0.4); /* Fondo translúcido suave */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes blink-cursor {
+    50% { border-color: transparent; }
+}
+
+.img-presentation {
+    background-color: transparent;
+    padding: 20%;
+    justify-content: center;
+    position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    
+}
+
+.yoImg {
+    width: 100%;
+    filter: drop-shadow(12px 8px 20px rgba(0, 0, 0, 0.2));
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+    border-radius: 15px;
+    border: 4px solid rgba(255, 192, 203, 0.6); /* Bordes en rosa suave */
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+/* MEDIA QUERIES PARA PANTALLAS RESPONSIVAS */
+
+/* Tablet: entre 768px y 1024px */
+@media (max-width: 1024px) {
+    .presentation {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+        text-align: center; /* Alinear el texto al centro */
+    }
+    .MyName {
+        font-size: 2.5vw; /* Tamaño de texto reducido */
+    }
+    .typewriter-container {
+        font-size: 2vw;
+    }
+    .img-presentation {
+        padding: 10%; /* Ajustar el padding */
+    }
+    .yoImg {
+        max-width: 70%; /* Reducir el tamaño de la imagen */
+    }
+}
+
+/* Móviles grandes: entre 480px y 767px */
+@media (max-width: 768px) {
+    .presentation {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 15px; /* Ajuste de espacio */
+    }
+    .MyName {
+        font-size: 2rem; /* Tamaño de texto adaptado */
+    }
+    .typewriter-container {
+        font-size: 1.8rem; /* Texto de máquina de escribir reducido */
+    }
+    .yoImg {
+        max-width: 65%; /* Ajustar tamaño de imagen */
+    }
+}
+
+/* Móviles pequeños: hasta 480px */
+@media (max-width: 480px) {
+    .presentation {
+        grid-template-columns: 1fr; /* Una columna */
+        padding: 10px; /* Reducir el padding */
+        gap: 10px; /* Ajustar el espacio */
+    }
+    .MyName {
+        font-size: 1.3rem; /* Reducir el texto */
+    }
+    .typewriter-container {
+        font-size: 1.4rem; /* Tamaño pequeño para móviles */
+    }
+    .yoImg {
+        max-width: 60%; /* Reducir la imagen */
+        
+    }
+    .img-presentation{
+        
+       
+    }
+}

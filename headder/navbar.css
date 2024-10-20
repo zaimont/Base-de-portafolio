@@ -1,0 +1,81 @@
+body{
+    background-color:#FCDDD4 ;
+}
+
+
+.nav-container{
+    display: grid;
+    justify-content: center;
+}
+.nav-menu{
+   position: relative;
+   width: 475px;
+   height: 50px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.nav-list a{
+    position: relative;
+    display: inline-block;
+    font-family: "Madimi One";
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    color: #BD3E3D;
+}
+
+.hamburger-menu{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .nav-list{
+        display: none;
+        flex-direction: column; /*el menu sera vertical en el movil*/
+        background-color: hsla(0, 0%, 2%, 0.034);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+    .hamburger-menu{
+        display: block;
+        position: absolute;
+        top: 10;
+        right: 20px;
+    }
+
+    .nav-menu{
+        justify-content: flex-end;/*alinea el menu a la derecha*/
+    }
+    .nav-list.show{
+        display: flex;/*muestra elñ menu de navegacion cuando esta activo*/
+    }
+}
+
+
+
+
+
+
+
